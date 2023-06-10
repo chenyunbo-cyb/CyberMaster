@@ -1,12 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Flask Docker</title>
-  </head>
-  <form method="POST" action="/ask">
-    <input type="text" name="question" placeholder="请输入问题" />
-    <button type="submit">发送</button>
-</form>
+<head>
+    <title>赛博大师</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>赛博大师</h1>
+        <p>“敲电子木鱼，问AI大师，取赛博真经”<br /> 在这里你可以向大师求愿或求解疑惑 <a href="https://github.com/chenyunbo-cyb/CyberMaster">Cyber Master</a>.</p>
+    </header>
+
+    <!-- Signup Form -->
+    <!-- <form id="signup-form" method="post" action="#"> -->
+    <form id="signup-form" method="POST" action="/ask">
+        <!-- <input type="email" name="email" id="email" placeholder="我想暴富" /> -->
+        <input type="text" name="question" placeholder="向大师求愿或求解疑惑" />
+        <!-- <button type="submit">点击咨询</button> -->
+        <input type="submit" value="点击发送" />
+    </form>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled.</li>
+            <li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/assets/js/main.js"></script>
+
+</body>
+
 </html>
