@@ -6,8 +6,8 @@ import requests
 
 app = Flask(__name__)
 
-os.environ["OPENAI_API_KEY"] = ''
-
+os.environ["OPENAI_API_KEY"] = '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'
+openai.api_key = os.getenv("OPENAI_API_KEY")
 # http_proxy  = "http://127.0.0.1:7890"
 # https_proxy = "http://127.0.0.1:7890"
 # proxies = { 
@@ -26,7 +26,7 @@ os.environ["OPENAI_API_KEY"] = ''
 # print(response.text)
 
 # First, let's load the language model we're going to use to control the agent.
-chat = ChatOpenAI(temperature=0)
+# chat = ChatOpenAI(temperature=0)
 
 
 @app.route('/')
@@ -39,20 +39,16 @@ def ask():
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "请使用佛祖或大师的口吻回答"},
+            {"role": "system", "content": "请使用佛祖或大师的口吻回答,语气请循循善诱、温柔平和，回答要积极、正能量，符合佛祖或大师的角色，并给出实际指导性建议，尽量保证回答500字以上"},
             {"role": "user", "content": question},
         ],
         temperature=0, # this is the degree of randomness of the model's output
     )
 
-    answer = response.choices[0].text.strip()
+    # answer = response.choices[0].text.strip()
+    answer = response["choices"][0]["message"]["content"]
 
-    # answer = chat.ask_question(question)
-
-    # response = "hhhh哈哈哈哈哈哈"
-    # answer = response
-
-    return answer
+    return render_template('answer.html', answer=answer)
 
 
 
