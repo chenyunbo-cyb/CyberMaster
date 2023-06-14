@@ -22,6 +22,11 @@
 - 电子焚香
 - 生成图片
 - 更多大师，孔子、鲁迅
+## 运行效果
+### 主页面
+![image](https://github.com/chenyunbo-cyb/CyberMaster/assets/52398597/0033e30c-7346-4886-84ca-0c76b4144cb8)
+### 回答界面
+![image](https://github.com/chenyunbo-cyb/CyberMaster/assets/52398597/7a2efdb3-bc52-4906-a28a-c825a2a0386b)
 
 ## 人员分工
 队长：小陈 <br>
