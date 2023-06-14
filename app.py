@@ -6,7 +6,7 @@ import requests
 
 app = Flask(__name__)
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 openai.api_key = os.getenv("OPENAI_API_KEY")
 # http_proxy  = "http://127.0.0.1:7890"
 # https_proxy = "http://127.0.0.1:7890"
